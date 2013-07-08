@@ -1,36 +1,44 @@
+
 import java.lang.Object;
 import java.util.Scanner;
 /**
- * Write a description of class Palindrome here.
+ * Write a description of class Palindrome2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-class Palindrome
+public class Palindrome2
 {
-    
-   public static void main(String args[])
-   {
-      String original = "";
-      String reverse = "";
-      Scanner in = new Scanner(System.in);
-     
-      System.out.println("Enter a string to check if it is a palindrome");
-      original = in.nextLine();
- 
-      int length = original.length();
- 
-      for ( int i = length - 1 ; i >= 0 ; i-- )
-         reverse = reverse + original.charAt(i);
- 
-      if (original.equals(reverse)) {
-         System.out.println("Entered string is a palindrome.");
-      } else {
-         System.out.println("Entered string is not a palindrome.");
- 
-      }
-     
-    }
-   
-   
+
+    /**
+     * Constructor for objects of class Palindrome2
+     */
+    public Palindrome2()
+    {
+        
+            String original = "";
+            String reverse = "";
+            Scanner in = new Scanner(System.in);
+            
+            System.out.println("Enter a string to check if it is a palindrome");
+            
+            original = in.nextLine();
+            int length = original.length();
+            int fromStart = 0;
+            int fromEnd = length-1;
+            boolean palindrome = false;
+            
+            while (fromStart<fromEnd && fromStart!=fromEnd)
+            {
+                if(original.charAt(fromStart) != original.charAt(fromEnd))
+                {
+                    palindrome = false;
+                } else {
+                    palindrome = true;
+                }
+              fromStart++;
+              fromEnd--;
+            }
+            System.out.println("Is this a palindrome?:" + palindrome);
+   }
 }
