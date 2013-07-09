@@ -1,7 +1,7 @@
 import java.lang.Object;
 import java.util.Scanner;
 /**
- * Write a description of class Palindrome2 here.
+ * Write a description of class Palindrome here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -10,7 +10,7 @@ public class Palindrome
 {
 
     /**
-     * Constructor for objects of class Palindrome2
+     * Constructor for objects of class Palindrome
      */
     public Palindrome()
     {
