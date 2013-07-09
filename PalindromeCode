@@ -1,4 +1,3 @@
-
 import java.lang.Object;
 import java.util.Scanner;
 /**
@@ -7,17 +6,16 @@ import java.util.Scanner;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Palindrome2
+public class Palindrome
 {
 
     /**
      * Constructor for objects of class Palindrome2
      */
-    public Palindrome2()
+    public Palindrome()
     {
         
             String original = "";
-            String reverse = "";
             Scanner in = new Scanner(System.in);
             
             System.out.println("Enter a string to check if it is a palindrome");
@@ -28,11 +26,12 @@ public class Palindrome2
             int fromEnd = length-1;
             boolean palindrome = false;
             
-            while (fromStart<fromEnd && fromStart!=fromEnd)
+            while (fromStart<fromEnd)
             {
                 if(original.charAt(fromStart) != original.charAt(fromEnd))
                 {
                     palindrome = false;
+                    break;
                 } else {
                     palindrome = true;
                 }
