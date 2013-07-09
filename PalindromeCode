@@ -26,10 +26,8 @@ public class Palindrome
             int fromEnd = length-1;
             boolean palindrome = false;
             
-            while (fromStart<fromEnd)
-            {
-                if(original.charAt(fromStart) != original.charAt(fromEnd))
-                {
+            while (fromStart<fromEnd) {
+                if(original.charAt(fromStart) != original.charAt(fromEnd)) {
                     palindrome = false;
                     break;
                 } else {
